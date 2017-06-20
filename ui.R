@@ -16,7 +16,7 @@ library(shinythemes)
 shinyUI(fluidPage(
         
         theme = shinytheme("cosmo"),
-        titlePanel("Next-Word-Prediction | Coursera | Capstone"),
+        titlePanel("Next-Word-Prediction | Coursera | Capstone | V 2.0"),
         
         # Sidebar layout
         sidebarLayout(
@@ -24,7 +24,7 @@ shinyUI(fluidPage(
                 sidebarPanel(
                         
                         # Text input
-                        textInput("text", label = ("Enter you base text "), value = "we can")),
+                        textInput("text", label = ("Enter you base text "), value = "Coursera is the")),
                         
                         
                 
@@ -41,6 +41,9 @@ shinyUI(fluidPage(
                                 plotOutput('wordcloud'),
                                 
                                 
+                                # Time for Prediction
+                                textOutput('timespent'),
+                        
                                 # Slide Deck presentation
                                 helpText(a("Slide Deck about the app",
                                            href='http://rpubs.com/EPaskin/Capstone', 
